@@ -2,8 +2,8 @@
 A test repo to keep track of and learn new things.
 
 This is the task list for you:
--- Commit a document with your name on it. Leave it blank. Call it initial commit.
--- Commit a document to this repository highlighting the things you've learnt today.
+- Commit a document with your name on it. Leave it blank. Call it initial commit.
+- Commit a document to this repository highlighting the things you've learnt today.
  
 
 
