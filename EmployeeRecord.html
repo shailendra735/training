@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Employee Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+  <body bgcolor="green">
+    <div class="container">
+      <h2>Employee Registration Form</h2>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="First_Name">First Name :</label>
+          <div class="col-md-4">
+            <input type="Text" class="form-control" id="First" placeholder="Enter First name" required maxlength="20">
+          </div>
+          <div class="col-md-4">
+            <input type="Text" class="form-control" id="Last" placeholder="Enter Last name" maxlength="20">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="UserName">User Name :</label>
+          <div class="col-md-8">
+            <input type="Text" class="form-control" id="User" required placeholder="Enter User name" maxlength="30">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Password">Password :</label>
+          <div class="col-md-8">
+            <input type="Password" class="form-control"  id="Password" placeholder="Enter Password" minlength="8" maxlength="20">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Confirm">Confirm Password :</label>
+          <div class="col-md-8">
+            <input type="Password" class="form-control" id="Confirm" placeholder="Enter Password Again" minlength="8" maxlength="20">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Email">Email :</label>
+          <div class="col-md-8">
+            <input type="email" class="form-control" id="email" required placeholder="Enter Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Address">Address :</label>
+          <div class="from-inline">
+            <div class="col-md-4">
+              
+              <input type="Text" class="form-control" id="First_Line" placeholder="House No/Village">
+            </div>
+            <div class="col-md-4">
+              <input type="Text" class="form-control" id="2nd_Line" placeholder="House No/Village">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-inline">
+            <label class="control-label col-sm-2" for="State">State :</label>
+            <div class="col-md-4">
+              <select class="form-control" id="sel1">
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option selected="selected">Delhi</option>
+                <option>Haryana</option>
+                <option>Punjab</option>
+                <option>Madhya Pradesh</option>
+                <option>Uttar Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Uttarakhand</option>
+                <option>Chattishgarh</option>
+                <option>Adhra Pradesh</option>
+                <option>Telangna</option>
+                <option>Odisha</option>
+                <option>TamilNadu</option>
+                <option>Karnataka</option>
+                <option>Maharastra</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="PIN">PIN:</label>
+          <div class="col-md-4">
+            <input type="number" class="form-control" id="PIN" placeholder="Enter Postal Code">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Gender">Gender :</label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked="checked">Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Female
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Mobile">Mobile :</label>
+          <div class="col-md-4">
+            <input type="text" maxlength="10" class="form-control" id="Mobile" placeholder="Enter Mobile No" >
+          </div>
+        </div>
+        <div class="form-inline">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+         <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </div>
+        </div>
+         <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Delete</button>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
