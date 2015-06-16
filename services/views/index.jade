@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	.row
+		.col-lg-4.col-offset-2
+			a.btn.btn-primary.btn-lg(type='button', href='/showlist') Show List
+		.col-lg-4
+			a.btn.btn-primary.btn-lg(type='button',href='/addnew') Add New Product
