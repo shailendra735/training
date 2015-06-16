@@ -1,0 +1,25 @@
+doctype html(lang='en')
+head
+	title SAMPLE #{title}
+
+	link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+	script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+body
+	.container
+		table
+			thead
+				th FirstName
+				th Designation
+				th 
+			tbody
+				each val in employees
+					tr
+						td #{val.fname}
+						td #{val.designation}
+						td
+							a.btn.btn-default(href='/edit/#{val._id}',type='button') Edit
+
+
+

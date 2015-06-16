@@ -1,0 +1,81 @@
+doctype html(lang='en')
+head
+    title  Create Employee #{title}
+    
+    meta(charset='utf-8')
+    
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+
+  body
+    .container
+      h2 Create Employee
+      form.form-horizontal(role='form' method='post' action="/")
+        input(type='hidden' name='_id' value=formdata?formdata._id:"")
+        .form-group
+          label.control-label.col-sm-2(for='fname') Name:
+          .col-sm-2
+            input#frmNameA.form-control(name='fname', type='text', placeholder='First name', maxlength='10', required,value=formdata.fname)
+          .col-sm-2
+            input#frmNameA.form-control(name='lname', type='text', placeholder='Last name', maxlength='10', required,value=formdata.lname)
+        .form-group
+          label.control-label.col-sm-2(for='dob') Date Of Birth:
+          .col-sm-4
+            input#dob.form-control(type='date', name='birthday', placeholder='Enter DOB', maxlength='10',  required,value=formdata.birthday)
+        .form-group
+          label.control-label.col-sm-2(for='gender') Gender:
+          .col-sm-4
+            input(type='radio', name='gender' value='male' , checked= formdata.sex == "male"  ? true:false )
+            | Male
+            input(type='radio', name='gender' value= 'female' ,checked= formdata.sex == "female" ? true:false )
+            | Female
+          
+        .form-group
+          label.control-label.col-sm-2(for='add') Address:
+          .col-sm-8
+            input#add.form-control(type='add', maxlength='30',name='add', placeholder='Enter  your full address' value=formdata.add)
+            br
+            .row
+              .col-md-6
+                label.control-label.col-sm-4(for='add') City:
+                select(name='City', maxlength='10', required, value=formdata.city )
+                  option(value='New Delhi') New Delhi
+                  option(value='Mumbai') Mumbai
+                  option(value='Kolkata') Kolkata
+                  option(value='Bangalore') Bangalore
+                  option(value='Ludhiana') Ludhiana
+                  option(value='Jaipur') Jaipur
+                  option(value='Lucknow') Lucknow
+              .col-md-6
+                label.control-label.col-sm-4(for='add') State:
+                select(name='State', maxlength='10', required, value=formdata.state )
+                  option(value='Delhi') Delhi
+                  option(value='Maharashtra') Maharashtra
+                  option(value='Punjab') Punjab
+                  option(value='Bihar') Bihar
+                  option(value='Uttar Pradesh') Uttar Pradesh
+                  option(value='Gujarat') West Bengal
+                  option(value='Karnataka') Karnataka
+
+            br
+            .row
+              .col-md-6
+                label.control-label.col-sm-4(for='add') PinCode:
+                input#frmZipB(name='zip', type='pin', placeholder='110011', value=formdata.zip,required)
+              .col-md-6
+                label.control-label.col-sm-4(for='add') Mobile:
+                input#frmPhoneNumA(type='tel', name='mob', placeholder='+91-5678905656', value=formdata.mob, required)
+          .col-sm-8
+        .form-group
+          label.control-label.col-sm-2(for='desgignation') Designation:
+          .col-sm-4
+            input#desg.form-control(type='designation', name='designation' placeholder='Enter designation', maxlength='15', value=formdata.designation,required)
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type='submit') SUBMIT
+            br
+            a.btn.btn-link(href='/list') List Of Employees
