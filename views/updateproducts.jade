@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h2= title
+    p Product List
+        h1 Product List
+        form.form-horizontal(method='PUT',action='/updateproducts.js')
+            .row
+                .col-lg-3
+                    input.form-control(type='text',name='title',value=product.title)
+                .col-lg-3
+                    input.form-control(type='text',name='des',value=product.des)
+                .col-lg-3
+                    input.form-control(type='text',name='price',value=product.price)
+                .col-lg-3
+                    input.form-control(type='text',name='brand',value=product.brand)
+            br
+            button.btn.btn-primary(type='submit') Update

@@ -1,0 +1,36 @@
+doctype html(lang='en')
+head
+    title Product Entry
+        
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')       
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')       
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+body
+  block content
+      h2= title
+      p Welcome to #{title}
+    .container
+      block=Welcome #{title}
+      form.form-horizontal(method='POST', role='form')
+        .form-group
+          label.col-lg-2.control-label(for='Title') Product Title :
+          .col-lg-4
+            input#title.form-control(type='Text',name='title', placeholder='Enter Product Title', required='', maxlength='20',value=formdata.title)
+        .form-group
+          label.col-lg-2.control-label(for='Description') Description :
+          .col-lg-4
+            input#Des.form-control(type='Text',name='des', placeholder='Enter Product Description',maxlength='100', value=formdata.des)
+        .form-group
+          label.col-lg-2.control-label(for='Price') Price :
+          .col-lg-4
+           input#Price.form-control(type='number',name='price', placeholder='Enter Product Price', value=formdata.price)
+        .form-group
+          label.col-lg-2.control-label(for='Brand') Product Brand :
+          .col-lg-4
+           input#brand.form-control(type='Text',name='brand', placeholder='Enter Product Title', maxlength='20', value=formdata.brand)
+        .form-group
+        .col-lg-2.col-lg-offset-4
+         button.btn.btn-default(type='submit') Save Data
+  

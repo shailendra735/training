@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1= title
+    p Product List
+        h2 Product List
+        #productList
+            table.table
+                thead
+                    th Name
+                    th Description
+                    th Price
+                    th Brand
+                    th
+                tbody
+                    each val in products
+                        tr
+                            td=val.title
+                            td=val.des
+                            td=val.price
+                            td=val.brand
+                            td: a(href='/products/#{val._id} ') Edit      
